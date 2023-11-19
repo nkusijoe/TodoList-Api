@@ -14,6 +14,18 @@ const todoSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  dueDate: Date,
+  priority: {
+    type: String,
+    enum: ['Low', 'Medium', 'High'],
+    default: 'Medium',
+  },
+  tags: [String],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
 });
 
 const Todo = mongoose.model('Todo', todoSchema);

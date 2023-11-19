@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const todoRoutes = require('./routes/todoRoutes');
+const userRoutes = require('./routes/userRoutes');
 const config = require('./configs/todoConfigs');
 
 const app = express();
@@ -28,7 +29,10 @@ mongoose.connection.on('disconnected', () => {
 });
 
 // Todo Routes
-app.use('/api', todoRoutes);
+app.use('/api/tasks', todoRoutes);
+
+// User Routes
+app.use('/api/users', userRoutes);
 
 // Start server
 const server = app.listen(PORT, () => {

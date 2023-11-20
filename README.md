@@ -1,13 +1,14 @@
 # TodoList API
 
-A Node.js API for managing Todo items with CRUD operations.
+A Node.js API for managing Tasks items with CRUD operations.
+Also this project is still under development, anyone can make pull requests and make improvements and push on a different branch
 
 ## 🚀 Features
 
 - **Todo Management:** 
-    - Create, Read, Update, and Delete Todo items.
+    - Create, Read, Update, and Delete Task items.
 - **User Authentication:** 
-    - Registration, login, and user-specific Todo lists.
+    - Registration, login, and user-specific Task lists.
 - **RESTful API:** 
     - Follows RESTful principles for API design.
 - **Error Handling:** 
@@ -17,7 +18,7 @@ A Node.js API for managing Todo items with CRUD operations.
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/TodoList-Api.git
+    git clone https://github.com/nkusijoe/TodoList-Api.git
     ```
 
 2. **Navigate to the project directory**:
@@ -32,18 +33,18 @@ A Node.js API for managing Todo items with CRUD operations.
 
 4. **Start the server**:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## 🔍 Endpoints
 
 ### Todos
 
-- **List All Todos:** `GET /api/todos`
-- **View a Todo:** `GET /api/todos/:id`
-- **Create a Todo:** `POST /api/todos`
-- **Update a Todo:** `PUT /api/todos/:id`
-- **Delete a Todo:** `DELETE /api/todos/:id`
+- **List All Todos:** `GET /api/`
+- **View a Todo:** `GET /api/:id`
+- **Create a Todo:** `POST /api/createTask`
+- **Update a Todo:** `PUT /api/task/:id`
+- **Delete a Todo:** `DELETE /api/task/:id`
 
 ### Authentication
 
